@@ -24,22 +24,22 @@
 #### localhost:8000/dealers       
 ###### method: GET
 
-Returns in JSON a list of all vehicles by dealers
+Returns in JSON a list of all vehicles by dealers.
 
 #### localhost:8000/model  
 ###### method: GET
 
-Retunrs in JSON a list of all vehicles by model
+Retunrs in JSON a list of all vehicles by model.
 
 ### localhost:8000/transmission 
 ###### method: GET
 
-Retunrs in JSON a list of all vehicles by transmission 
+Retunrs in JSON a list of all vehicles by transmission.
 
 ### localhost:8000/fuel 
 ###### method: GET
 
-Retunrs in JSON a list of all vehicles by fuel
+Retunrs in JSON a list of all vehicles by fuel.
 
 
 ### localhost:8000/finddealer 
@@ -52,13 +52,13 @@ Retunrs in JSON a list of all vehicles by fuel
 
 
 
-Returns in JSON the closest dealer
+Returns in JSON the closest dealer.
 
 
 ### localhost:8000/bookings 
 ###### method: GET
 
-Returns in JSON all bookings
+Returns in JSON all bookings.
 
 ### localhost:8000/bookings 
 ###### method: POST
@@ -86,3 +86,12 @@ Creates a new booking.
 
 
 Cancel a booking.
+
+
+
+### Explanation about my choices
+
+*The source code is in Jave because is the languague that I am more familiar.
+*The Server is multithreads so it handles multiple request at the same time.
+*It is possible to do a booking of a one with the same characteristics as long it has been cancelled before the "createdAt" date
+*To prevent data races and data omission I implement a lock system to create/delete/see  bookings.
