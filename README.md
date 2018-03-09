@@ -92,6 +92,9 @@ Cancel a booking.
 ### Explanation about my choices
 
 *The source code is in Jave because is the languague that I am more familiar.
+
 *The Server is multithreads so it handles multiple request at the same time.
+
 *It is possible to do a booking of a one with the same characteristics as long it has been cancelled before the "createdAt" date
+
 *To prevent data races and data omission I implement a lock system to create/delete/see  bookings.
