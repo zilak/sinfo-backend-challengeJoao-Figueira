@@ -123,13 +123,14 @@ public class BookingsHandler implements HttpHandler {
                         lock.lock();
                         outputObj.put("bookings",bookings);
                         byte[] rawResponseBody = outputObj.toString().getBytes();
+                        lock.unlock();
                         try {
                             httpExchange.sendResponseHeaders(200, rawResponseBody.length); // 200 (ok) and send the object
                             httpExchange.getResponseBody().write(rawResponseBody);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        lock.unlock();
+
                         break;
                     default:
                         break;
