@@ -95,6 +95,7 @@ Cancel a booking.
 
 * The Server is multithreaded so it handles multiple request at the same time.
 
-* It is possible to do a booking of with the same characteristics as long it has been cancelled before the "createdAt" date
+* It is possible to do a booking with the same characteristics as long it has been cancelled before the "createdAt" date
 
 * To prevent data races and data omission I implement a lock system to create/delete/see  bookings.
+* "Improvement suggestions" are not implemented.
